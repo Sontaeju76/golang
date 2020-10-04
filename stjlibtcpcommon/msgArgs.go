@@ -29,4 +29,8 @@ func getPacketID() func() uint {
 // PacketID : send packet ID
 var PacketID = getPacketID()
 
-// var Preamble = [3]byte{byte('E'), byte('M'), byte('P')}
+// OBJMSGARGS : message arguments
+type OBJMSGARGS struct {
+	Header *OBJMSGHeader
+	Data   []byte
+}
