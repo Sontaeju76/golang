@@ -1,5 +1,13 @@
 package stjlibtcpcommon
 
+// OBJMSG : message object
+type OBJMSG interface {
+	GetOPCode() uint16
+	Parse(msg []byte) bool
+	Make() []byte
+}
+
+/*
 // OBJMSG : message
 type OBJMSG struct {
 	Header *OBJMSGHeader
@@ -30,3 +38,4 @@ func (obj *OBJMSG) Parse(msg []byte) bool {
 func (obj *OBJMSG) Make() []byte {
 	return nil
 }
+*/
