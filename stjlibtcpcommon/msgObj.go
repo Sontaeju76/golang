@@ -1,5 +1,12 @@
 package stjlibtcpcommon
 
+// IOBJMSG : message object
+type IOBJMSG interface {
+	GetOPCode() uint16
+	Parse(msg []byte) bool
+	Make() []byte
+}
+
 // OBJMSG : message
 type OBJMSG struct {
 	Header *OBJMSGHeader
