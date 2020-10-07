@@ -35,5 +35,5 @@ func (c *netClient) rcv() {
 			println("RCV :: ", string(buf[:read]))
 		}
 	}
-	defer delete(Clients, c)
+	// defer delete(Clients, c)
 }

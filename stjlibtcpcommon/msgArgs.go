@@ -31,6 +31,7 @@ var PacketID = getPacketID()
 
 // OBJMSGARGS : message arguments
 type OBJMSGARGS struct {
-	Header *OBJMSGHeader
-	Data   []byte
+	ClientSeq uint32
+	Header    *OBJMSGHeader
+	Data      []byte
 }
