@@ -145,7 +145,6 @@ func (c *NetClient) rcv() {
 			}
 
 			if !c.NeedHeader {
-
 			}
 
 			println("RCV :: ", string(buf[:read]))
