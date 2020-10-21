@@ -17,7 +17,7 @@ func init() {
 	// Clients = make(map[*netClient]int)
 	Clients = make(map[uint32]*netcomm.NetClient)
 	clientsSeq = 1
-	rcvch = make(chan *netcomm.OBJMSGARGS, 200)
+	rcvch = make(chan *netcomm.OBJMSGARGS, 100)
 }
 
 // Start : start server

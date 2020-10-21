@@ -49,7 +49,7 @@ func (h *OBJMSGHeader) Parse(header []byte) bool {
 
 // Make :Make message header
 func (h *OBJMSGHeader) Make() []byte {
-	rVal := []byte{Preamble(0), Preamble(1), Preamble(2), 0x00}
+	rVal := []byte{PREAMBLE[0], PREAMBLE[1], PREAMBLE[2], 0x00}
 
 	arrPacketLength := Uint32ToByteArr(h.PacketLength, true)
 	rVal = append(rVal, arrPacketLength...)
